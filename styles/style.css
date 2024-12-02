@@ -67,15 +67,18 @@ h1 {
   position: relative;
 }
 
-.decorated-zone::after {
-  content: "</html>";
+.decorated-text.tt-uppercase {
+  text-transform: uppercase;
+}
+
+.decorated-text {
+  z-index: 10;
   position: absolute;
   opacity: 0.5;
   color: var(--text-color);
   font-family: var(--accent-font), fantasy;
   font-weight: 400;
   font-size: 14px;
-  text-transform: uppercase;
   text-shadow: 1px white;
   mix-blend-mode: hard-light;
   inset-block-start: 25px;
@@ -83,7 +86,7 @@ h1 {
 }
 
 @supports (-webkit-text-stroke: 1px white) {
-  .decorated-zone::after {
+  .decorated-text {
     text-shadow: none;
     -webkit-text-stroke: 1px white;
   }
@@ -334,7 +337,7 @@ dialog::backdrop {
   scale: 0.75;
 }
 
-/* cards filters and decorations */
+/* cards filters */
 
 .filter-sepia-60 {
   filter: sepia(60%);
@@ -344,54 +347,27 @@ dialog::backdrop {
   filter: saturate(350%);
 }
 
-.card__css.decorated-zone::after {
-  content: "<css>";
-}
-
 .filter-hue-rotate {
   filter: hue-rotate(30deg);
-}
-
-.desigions.decorated-zone::after {
-  content: "<desigions>";
-  text-transform: lowercase;
 }
 
 .filter-invert-brightness {
   filter: invert(1) brightness(80%);
 }
 
-.care.decorated-zone::after {
-  content: "care";
-  text-transform: lowercase;
-}
-
 .filter-sepia {
   filter: sepia(1);
-}
-
-.support.decorated-zone::after {
-  content: "<support>";
-  text-transform: lowercase;
 }
 
 .filter-blur {
   filter: blur(1rem);
 }
 
-.lifes-style.decorated-zone::after {
-  content: "<lifes-style: none;>";
-  text-transform: lowercase;
-}
-
 .filter-hr-contr-bright-blur {
   filter: hue-rotate(127deg) contrast(1) brightness(84%) blur(2px);
 }
 
-.experience.decorated-zone::after {
-  content: "<experience>";
-  text-transform: lowercase;
-}
+/* filters end */
 
 @media (width <= 375px) {
   .header {
@@ -415,7 +391,7 @@ dialog::backdrop {
     padding-inline-end: 33px;
   }
 
-  .decorated-zone::after {
+  .decorated-text {
     inset-inline-end: 13px;
   }
 
