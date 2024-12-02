@@ -1,1 +1,18 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+    --main-font: 'Inter';
+    --accent-font: 'PressStart2P-Regular';
+    --bg-gradient-inline-start: #d3d3d3;
+    --bg-gradient-inline-end: transparent;
+    --bg-gradient-block-start: #e7e7e7;
+    --bg-gradient-block-end: #1a1a1a;
+    --bg-gradient: repeating-linear-gradient(to right, var(--bg-gradient-inline-start) 0px 2px, var(--bg-gradient-inline-end) 2px 4px),
+    repeating-linear-gradient(var(--bg-gradient-inline-start) 0px 2px, var(--bg-gradient-inline-end) 2px 4px),
+    linear-gradient(var(--bg-gradient-block-start), var(--bg-gradient-block-start) 0.01%, var(--bg-gradient-block-end) 100%);
+    --bg-color: white;
+    --text-color: black;
+    --logo-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --text-font-size: clamp(0.875rem, 0.787rem + 0.3756vw, 1.125rem);
+    --subtitle-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
