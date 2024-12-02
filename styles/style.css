@@ -64,7 +64,7 @@ h2 {
 }
 
 .card__title {
-  font-weight: 700;
+  font-variation-settings: "wght" 700;
   font-size: 18px;
 }
 
