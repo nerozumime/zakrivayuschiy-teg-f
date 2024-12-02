@@ -1,8 +1,6 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
-
 :root {
     --main-font: 'Inter';
-    --accent-font: 'PressStart2P-Regular';
+    --accent-font: 'PressStart2P';
     --bg-gradient-inline-start: #d3d3d3;
     --bg-gradient-inline-end: transparent;
     --bg-gradient-block-start: #e7e7e7;
