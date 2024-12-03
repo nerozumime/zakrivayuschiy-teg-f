@@ -277,6 +277,11 @@ h1 {
 
 .button:hover .floppy {
   filter: invert(1);
+  transition: filter 0.1s;
+}
+
+rect {
+  mix-blend-mode: difference;
 }
 
 .submit__floppy {
@@ -327,7 +332,7 @@ dialog::backdrop {
 .floppy {
   z-index: 5;
   scale: 0.75;
-  transition: filter 0.3s ease-in;
+  transition: filter 2s; /* mix-blend-mode c svg не знаю как использовать */
 }
 
 /* cards filters */
