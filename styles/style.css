@@ -72,8 +72,8 @@ h1 {
 }
 
 .decorated-text {
-  z-index: 10;
   position: absolute;
+  z-index: 10;
   opacity: 0.5;
   color: var(--text-color);
   font-family: var(--accent-font), fantasy;
@@ -104,7 +104,7 @@ h1 {
   flex-direction: column;
   gap: 29px;
   padding: 25px;
-  font-weight: 400;
+  font-variation-settings: "wght" 400;
   font-size: 18px;
   line-height: 117%;
 }
@@ -201,6 +201,7 @@ h1 {
 .card__icon-button {
   display: flex;
   justify-content: center;
+  align-items: center;
   border: none;
   padding: 0;
   outline: 2px solid transparent;
@@ -219,19 +220,24 @@ h1 {
   box-shadow: 2px 2px 0 0 black;
 }
 
-.card__like-button {
-  position: relative;
+.save__button {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-inline: auto;
+  padding: 15px 20px;
+}
+
+.button {
+  position: relative;
   border: 2px solid black;
-  padding-block: 11px;
   box-shadow: 2px 2px 0 0 transparent;
   color: var(--text-color);
   font-family: var(--accent-font), fantasy;
   font-weight: 400;
   font-size: 14px;
   line-height: 90%;
-  background-color: transparent;
+  background-color: var(--bg-color);
   transition: outline 0.3s ease;
   transition: color 0.5s;
   transition: box-shadow 0.5s ease;
@@ -239,12 +245,18 @@ h1 {
   min-inline-size: 130px;
 }
 
+.card__like-button {
+  display: flex;
+  justify-content: center;
+  padding-block: 11px;
+}
+
 .button__text {
   z-index: 2;
   white-space: nowrap;
 }
 
-.card__like-button::after {
+.button::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -255,37 +267,17 @@ h1 {
   transition: width 0.5s;
 }
 
-.card__like-button:hover {
+.button:hover .button__text {
   color: white;
+  mix-blend-mode: difference;
 }
 
-.card__like-button:hover::after {
+.button:hover .floppy {
+  filter: invert(1);
+}
+
+.button:hover::after {
   width: 100%;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-}
-
-.save__button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-inline: auto;
-  border: 2px solid black;
-  padding: 15px 20px;
-  color: var(--text-color);
-  font-family: var(--accent-font), fantasy;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 90%;
-  background-color: var(--bg-color);
-  cursor: pointer;
-}
-
-.save__button:active {
-  box-shadow: inset 100px 100px 0 0 rgba(0, 0, 0, 0.3);
 }
 
 .submit__floppy {
@@ -334,6 +326,7 @@ dialog::backdrop {
 }
 
 .floppy {
+  z-index: 5;
   scale: 0.75;
 }
 
