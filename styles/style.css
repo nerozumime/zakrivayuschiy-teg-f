@@ -216,7 +216,7 @@ h1 {
   outline-color: black;
 }
 
-.card__like-button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 0 black;
 }
 
@@ -226,6 +226,12 @@ h1 {
   gap: 8px;
   margin-inline: auto;
   padding: 15px 20px;
+}
+
+.card__like-button {
+  display: flex;
+  justify-content: center;
+  padding-block: 11px;
 }
 
 .button {
@@ -245,15 +251,11 @@ h1 {
   min-inline-size: 130px;
 }
 
-.card__like-button {
-  display: flex;
-  justify-content: center;
-  padding-block: 11px;
-}
-
 .button__text {
   z-index: 2;
   white-space: nowrap;
+  transition: color 0.5s ease-in-out;
+  mix-blend-mode: difference;
 }
 
 .button::after {
@@ -269,15 +271,14 @@ h1 {
 
 .button:hover .button__text {
   color: white;
-  mix-blend-mode: difference;
-}
-
-.button:hover .floppy {
-  filter: invert(1);
 }
 
 .button:hover::after {
   width: 100%;
+}
+
+.button:hover .floppy {
+  filter: invert(1);
 }
 
 .submit__floppy {
