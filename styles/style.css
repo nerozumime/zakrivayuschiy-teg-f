@@ -277,10 +277,6 @@ h1 {
   width: 100%;
 }
 
-.button:hover .floppy {
-  filter: invert(1);
-}
-
 .submit__floppy {
   max-inline-size: 21px;
 }
