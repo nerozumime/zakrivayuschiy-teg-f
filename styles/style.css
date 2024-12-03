@@ -275,6 +275,10 @@ h1 {
   width: 100%;
 }
 
+.button:hover .floppy {
+  filter: invert(1);
+}
+
 .submit__floppy {
   max-inline-size: 21px;
 }
@@ -323,6 +327,7 @@ dialog::backdrop {
 .floppy {
   z-index: 5;
   scale: 0.75;
+  transition: filter 0.3s ease-in;
 }
 
 /* cards filters */
