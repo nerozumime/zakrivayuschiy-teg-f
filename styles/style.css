@@ -326,7 +326,7 @@ dialog::backdrop {
 
 .floppy {
   z-index: 5;
-  filter: invert(1);
+  color: white;
   scale: 0.75;
   mix-blend-mode: difference;
 }
