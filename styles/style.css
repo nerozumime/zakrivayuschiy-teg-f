@@ -104,9 +104,9 @@ h1 {
   flex-direction: column;
   gap: 29px;
   padding: 25px;
-  font-variation-settings: "wght" 400;
   font-size: 18px;
   line-height: 117%;
+  font-variation-settings: "wght" 400;
 }
 
 .inreased-padding-ie {
@@ -238,6 +238,7 @@ h1 {
   position: relative;
   border: 2px solid black;
   box-shadow: 2px 2px 0 0 transparent;
+  color: white;
   font-family: var(--accent-font), fantasy;
   font-weight: 400;
   font-size: 14px;
@@ -267,16 +268,8 @@ h1 {
   transition: width 0.5s;
 }
 
-.button:hover .button__text {
-  color: white;
-}
-
 .button:hover::after {
   width: 100%;
-}
-
-rect {
-  mix-blend-mode: difference;
 }
 
 .submit__floppy {
